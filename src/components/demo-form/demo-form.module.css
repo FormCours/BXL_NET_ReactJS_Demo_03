@@ -1,0 +1,12 @@
+.demoForm {
+    text-align: start;
+    margin-left: 20px;
+}
+
+.demoForm > div {
+    margin-bottom: 10px;
+}
+
+.demoForm > div > label:first-child {
+    width: 100 px;
+}
