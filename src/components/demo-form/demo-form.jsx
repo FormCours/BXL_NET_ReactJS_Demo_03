@@ -12,6 +12,7 @@ const DemoForm = (props) => {
     const [email, setEmail] = useState('');
     const [emailValid, setEmailValid] = useState(true);
     const [newsletterOK, setNewsletterOK] = useState(false);
+    const [theme, setTheme] = useState('admin');
     
     const handleNbPerson = (e) => {
         const {value} = e.target;
@@ -55,6 +56,7 @@ const DemoForm = (props) => {
         setEmail('');
         setEmailValid(true);
         setNewsletterOK(false);
+        setTheme('admin');
     }
 
     return (<>
@@ -131,6 +133,17 @@ const DemoForm = (props) => {
                 <input type="checkbox"
                     onChange={(e) => setNewsletterOK(e.target.checked)}
                     checked={newsletterOK} />
+            </div>
+
+            {/* Utilisation d'une balise Select */}
+            <div>
+                <label>Theme : </label>
+                <select onChange={(e) => setTheme(e.target.value)} value={theme}>
+                    <option value="dev">Developpement</option>
+                    <option value="infra">Infrastructure</option>
+                    <option value="admin">Administration</option>
+                    <option value="other">Autre...</option>
+                </select>
             </div>
 
             <button type="submit">Valider</button>
