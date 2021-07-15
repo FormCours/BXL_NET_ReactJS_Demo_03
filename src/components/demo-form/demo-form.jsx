@@ -153,11 +153,13 @@ const DemoForm = (props) => {
         <h2>Valeur contenu</h2>
         <p>Les valeurs sont : </p> 
         <ul>
-            <li>Person : ... ... ...</li>
-            <li>Nb : ...</li>
-            <li>Commentaire : ...</li>
-            <li>Email : ...</li>
-            <li>Newsletter : ...</li>
+            <li>Person : {firstname} {lastname}</li>
+            <li>Sexe: {(sexe === 'F') ? 'Femme' : (sexe === 'M') ? 'Homme' : 'N/A'}</li>
+            <li>Nb : {nbPerson}</li>
+            <li>Commentaire : {comment}</li>
+            <li>Email : {email}</li>
+            <li>Newsletter : {newsletterOK ? 'Oui' : 'Non'}</li>
+            <li>Theme : {theme}</li>
         </ul>
     </>);
 }
